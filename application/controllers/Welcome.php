@@ -10,5 +10,13 @@ class Welcome extends CI_Controller {
 			 $this->load->view('portofolio/footerporto');
 	}
 
+	public function konsultasi(){
+
+		$this->load->view('portofolio/headerporto');
+		$this->load->view('portofolio/view_konsultasi');
+		$this->load->view('portofolio/footerporto');
+
+	}
+
 
 }
