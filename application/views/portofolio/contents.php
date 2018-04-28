@@ -27,12 +27,10 @@
     <div class="container">
     <div class="row">
       <div class="col-lg-8 col-lg-offset-2 centered">
-        <img src="<?= base_url();?>assets/gallery/myporto.jpg" alt="Stanley" height="200px";width="250px">
+        <img src="<?= base_url();?>assets/gallery/myporto.jpg" alt="Stanley" height="200px";width="250px" class="img-circle">
         <h1>Official Website</h1>
         <p>Menerima Jasa Konsultasi Website dan Pemrograman Android</p>
         <!-- <p>Hello everybody. I'm Stanley, a free handsome bootstrap theme coded by BlackTie.co. A really simple theme for those wanting to showcase their work with a cute & clean style.</p> -->
-
-
       </div><!-- /col-lg-8 -->
     </div><!-- /row -->
     </div> <!-- /container -->
