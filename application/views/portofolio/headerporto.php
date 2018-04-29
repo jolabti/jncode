@@ -20,5 +20,28 @@
     <script src="https://code.jquery.com/jquery-1.10.2.min.js"></script>
     <script src="<?php echo base_url();?>assets/clients/js/hover.zoom.js"></script>
     <script src="<?php echo base_url();?>assets/clients/js/hover.zoom.conf.js"></script>
- 
+
   </head>
+  <body>
+
+    <!-- Static navbar -->
+    <div class="navbar navbar-inverse navbar-static-top">
+      <div class="container">
+        <div class="navbar-header">
+          <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+          </button>
+          <a class="navbar-brand" href="index.html">Johan Nainggolan</a>
+        </div>
+        <div class="navbar-collapse collapse">
+          <ul class="nav navbar-nav navbar-right">
+            <li><a href="<?= site_url('welcome/konsultasi');?>">Daftar Konsultasi</a></li>
+            <li><a href="#">Penelitian</a></li>
+            <li><a href="http://jn-code.xyz/blogsus/">Blog</a></li>
+            <li><a href="#">Tentang</a></li>
+          </ul>
+        </div><!--/.nav-collapse -->
+      </div>
+    </div>
