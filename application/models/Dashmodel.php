@@ -9,6 +9,12 @@ class Dashmodel extends CI_Model
         $this->db->where('user_password', $password);
         return $this->db->get('jncode_user')->num_rows();
     }
+    public function dm_user_data($email, $password)
+    {
+        $this->db->where('user_email', $email);
+        $this->db->where('user_password', $password);
+        return $this->db->get('jncode_user')->row();
+    }
 
     public function dm_signup($data)
     {

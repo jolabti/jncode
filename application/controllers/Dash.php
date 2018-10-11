@@ -5,7 +5,12 @@ class Dash extends CI_Controller
 {
     public function index()
     {
-        $this->load->view("dash/dash_login");
+        if ($this->session->userdata("email")=="") {
+            $this->load->view("dash/dash_login");
+        } else {
+            $this->mydashboard();
+        }
+
         //display_page("dash/dash_login");
     }
     public function mydashboard()
@@ -48,10 +53,26 @@ class Dash extends CI_Controller
         $password = $this->input->post("password");
 
         $cekUser = $this->Dashmodel->dm_login($email, $password);
+        $cekData = $this->Dashmodel->dm_user_data($email, $password);
+
         if ($cekUser>0) {
             $this->mydashboard();
+
+            $dataSession =  array(
+              'email' => $email,
+              'status' => $cekData->user_status,
+              'role' =>  $cekData->user_role
+            );
+
+            $this->session->set_userdata($dataSession);
         } else {
             $this->index();
         }
+    }
+
+    public function logout()
+    {
+        $this->session->sess_destroy();
+        redirect('/');
     }
 }
